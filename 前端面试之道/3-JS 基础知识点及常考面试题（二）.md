@@ -43,7 +43,7 @@ JS 基础知识点及常考面试题（二）
 
 如果你觉得记忆步骤太麻烦的话，我还提供了流程图供大家使用：
 
-![](./3-JS 基础知识点及常考面试题（二）_files/167c4a2627fe55f1)
+![](https://user-gold-cdn.xitu.io/2018/12/19/167c4a2627fe55f1?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
 当然了，这个流程图并没有将所有的情况都列举出来，我这里只将常用到的情况列举了，如果你想了解更多的内容可以参考 [标准文档](https://link.juejin.im/?target=https%3A%2F%2Fwww.ecma-international.org%2Fecma-262%2F5.1%2F%23sec-11.9.1)。
 
@@ -208,7 +208,7 @@ JS 基础知识点及常考面试题（二）
 
 如果你有这么一个循环引用对象，你会发现并不能通过该方法实现深拷贝
 
-![](./3-JS 基础知识点及常考面试题（二）_files/1626b1ec2d3f9e41)
+![](https://user-gold-cdn.xitu.io/2018/3/28/1626b1ec2d3f9e41?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
 在遇到函数、 `undefined` 或者 `symbol` 的时候，该对象也不能正常的序列化
 
@@ -293,7 +293,7 @@ JS 基础知识点及常考面试题（二）
 
 当我们创建一个对象时 `let obj = { age: 25 }`，我们可以发现能使用很多种函数，但是我们明明没有定义过它们，对于这种情况你是否有过疑惑？
 
-![](./3-JS 基础知识点及常考面试题（二）_files/1671d15f45fcedea)
+![](https://user-gold-cdn.xitu.io/2018/11/16/1671d15f45fcedea?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
 当我们在浏览器中打印 `obj` 时你会发现，在 `obj` 上居然还有一个 `__proto__` 属性，那么看来之前的疑问就和这个属性有关系了。
 
@@ -301,19 +301,19 @@ JS 基础知识点及常考面试题（二）
 
 讲到这里好像还是没有弄明白什么是原型，接下来让我们再看看 `__proto__` 里面有什么吧。
 
-![](./3-JS 基础知识点及常考面试题（二）_files/1671d2c5a6bcccc4)
+![](https://user-gold-cdn.xitu.io/2018/11/16/1671d2c5a6bcccc4?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
 看到这里你应该明白了，原型也是一个对象，并且这个对象中包含了很多函数，所以我们可以得出一个结论：对于 `obj` 来说，可以通过 `__proto__` 找到一个原型对象，在该对象中定义了很多函数让我们来使用。
 
 在上面的图中我们还可以发现一个 `constructor` 属性，也就是构造函数
 
-![](./3-JS 基础知识点及常考面试题（二）_files/1671d329ec98ec0b)
+![](https://user-gold-cdn.xitu.io/2018/11/16/1671d329ec98ec0b?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
 打开 `constructor` 属性我们又可以发现其中还有一个 `prototype` 属性，并且这个属性对应的值和先前我们在 `__proto__` 中看到的一模一样。所以我们又可以得出一个结论：原型的 `constructor` 属性指向构造函数，构造函数又通过 `prototype` 属性指回原型，但是并不是所有函数都具有这个属性，`Function.prototype.bind()` 就没有这个属性。
 
 其实原型就是那么简单，接下来我们再来看一张图，相信这张图能让你彻底明白原型和原型链
 
-![](./3-JS 基础知识点及常考面试题（二）_files/1671d387e4189ec8)
+![](https://user-gold-cdn.xitu.io/2018/11/16/1671d387e4189ec8?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
 看完这张图，我再来解释下什么是原型链吧。其实原型链就是多个对象通过 `__proto__` 的方式连接了起来。为什么 `obj` 可以访问到 `valueOf` 函数，就是因为 `obj` 通过原型链找到了 `valueOf` 函数。
 

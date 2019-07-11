@@ -37,7 +37,7 @@ UDP
 
 因此 UDP 的头部开销小，只有八字节，相比 TCP 的至少二十字节要少得多，在传输数据报文时是很高效的。
 
-![](./25-UDP_files/163195b245ceb89c)
+![](https://user-gold-cdn.xitu.io/2018/5/1/163195b245ceb89c?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
 UDP 头部包含了以下几个数据
 

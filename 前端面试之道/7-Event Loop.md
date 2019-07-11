@@ -25,7 +25,7 @@ Event Loop
 
 可以把执行栈认为是一个存储函数调用的**栈结构**，遵循先进后出的原则。
 
-![](./7-Event Loop_files/1670d2d20ead32ec)
+![](https://user-gold-cdn.xitu.io/2018/11/13/1670d2d20ead32ec?imageslim)
 
 执行栈可视化
 
@@ -42,7 +42,7 @@ Event Loop
     bar()
     
 
-![](./7-Event Loop_files/1670c0e21540090c)
+![](https://user-gold-cdn.xitu.io/2018/11/13/1670c0e21540090c?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
 函数执行顺序
 
@@ -56,7 +56,7 @@ Event Loop
     bar()
     
 
-![](./7-Event Loop_files/1670c128acce975f)
+![](https://user-gold-cdn.xitu.io/2018/11/13/1670c128acce975f?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
 爆栈
 
@@ -67,7 +67,7 @@ Event Loop
 
 上一小节我们讲到了什么是执行栈，大家也知道了当我们执行 JS 代码的时候其实就是往执行栈中放入函数，那么遇到异步代码的时候该怎么办？其实当遇到异步的代码时，会被**挂起**并在需要执行的时候加入到 Task（有多种 Task） 队列中。一旦执行栈为空，Event Loop 就会从 Task 队列中拿出需要执行的代码并放入执行栈中执行，所以本质上来说 JS 中的异步还是同步行为。
 
-![](./7-Event Loop_files/16740fa4cd9c6937)
+![](https://user-gold-cdn.xitu.io/2018/11/23/16740fa4cd9c6937?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
 事件循环
 
@@ -148,7 +148,7 @@ Node 中的 Event Loop 和浏览器中的是完全不相同的东西。
 
 Node 的 Event Loop 分为 6 个阶段，它们会按照**顺序**反复运行。每当进入某一个阶段的时候，都会从对应的回调队列中取出函数去执行。当队列为空或者执行的回调函数数量到达系统设定的阈值，就会进入下一阶段。
 
-![](./7-Event Loop_files/1670c3fe3f9a5e2b)
+![](https://user-gold-cdn.xitu.io/2018/11/13/1670c3fe3f9a5e2b?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
 ### timer
 
@@ -224,7 +224,7 @@ close callbacks 阶段执行 close 事件
 
 上面介绍的都是 macrotask 的执行情况，对于 microtask 来说，它会在以上每个阶段完成前**清空** microtask 队列，下图中的 Tick 就代表了 microtask
 
-![](./7-Event Loop_files/16710fb80dd42d27)
+![](https://user-gold-cdn.xitu.io/2018/11/14/16710fb80dd42d27?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
     setTimeout(() => {
       console.log('timer21')

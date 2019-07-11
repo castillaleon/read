@@ -19,7 +19,7 @@ JS 对于每位前端开发都是必备技能，在小册中我们也会有多�
 
 首先原始类型存储的都是值，是没有函数可以调用的，比如 `undefined.toString()`
 
-![](./2-JS 基础知识点及常考面试题（一）_files/16711c4f991c73ac)
+![](https://user-gold-cdn.xitu.io/2018/11/14/16711c4f991c73ac?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
 此时你肯定会有疑问，这不对呀，明明 `'1'.toString()` 是可以使用的。其实在这种情况下，`'1'` 已经不是原始类型了，而是被强制转换成了 `String` 类型也就是对象类型，所以可以调用 `toString` 函数。
 
@@ -74,7 +74,7 @@ JS 对于每位前端开发都是必备技能，在小册中我们也会有多�
 *   到函数内部修改参数的属性这步，我相信大家都知道，当前 `p1` 的值也被修改了
 *   但是当我们重新为 `person` 分配了一个对象时就出现了分歧，请看下图
 
-![](./2-JS 基础知识点及常考面试题（一）_files/16712ce155afef8c)
+![](https://user-gold-cdn.xitu.io/2018/11/14/16712ce155afef8c?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
 所以最后 `person` 拥有了一个新的地址（指针），也就和 `p1` 没有任何关系了，导致了最终两个变量的值是不相同的。
 
@@ -137,7 +137,7 @@ typeof vs instanceof
 
 我们先来看一个类型转换表格，然后再进入正题
 
-![](./2-JS 基础知识点及常考面试题（一）_files/16716dec14421e47)
+![](https://user-gold-cdn.xitu.io/2018/11/15/16716dec14421e47?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
 ### 转Boolean
 
@@ -297,7 +297,7 @@ this
 
 如果你还是觉得有点绕，那么就看以下的这张流程图吧，图中的流程只针对于单个规则。
 
-![](./2-JS 基础知识点及常考面试题（一）_files/16717eaf3383aae8)
+![](https://user-gold-cdn.xitu.io/2018/11/15/16717eaf3383aae8?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
 小结
 --

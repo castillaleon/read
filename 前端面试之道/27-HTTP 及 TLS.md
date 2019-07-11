@@ -284,7 +284,7 @@ TLS 协议位于传输层之上，应用层之下。首次进行 TLS 协议传�
 
 **TLS 握手过程如下图：**
 
-![](./27-HTTP 及 TLS_files/1635260126b3a10c)
+![](https://user-gold-cdn.xitu.io/2018/5/12/1635260126b3a10c?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
 客户端发送一个随机值以及需要的协议和加密方式。
 
