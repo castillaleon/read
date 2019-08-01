@@ -1,52 +1,33 @@
-const contacts = [
-  'a1',
-  'a2',
-  'b1',
-  'b2',
-  'c1',
-  'c2',
-  'd1',
-  'd2',
-  'e1',
-  'e2',
-  'f1',
-  'f2',
-  'g1',
-  'g2',
-  'h1',
-  'h2',
-  'i1',
-  'i2',
-  'j1',
-  'j2',
-  'k1',
-  'k2',
-  'l1',
-  'l2',
-  'm1',
-  'm2',
-  'n1',
-  'n2',
-  'o1',
-  'o2',
-  'p1',
-  'p2',
-  'q1',
-  'q2',
-  'r1',
-  'r2',
-  's1',
-  's2',
-  't1',
-  't2',
-  'u1',
-  'u2',
-  'v1',
-  'v2',
-  'x1',
-  'x2',
-  'y1',
-  'y2',
-  'z1',
-  'z2'
-]
+const contacts = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2', 'c3']
+
+const result = []
+contacts.forEach(x => {
+  const firstWord = x[0]
+  if (!result[firstWord]) {
+    result[firstWord] = []
+  }
+
+  result[firstWord].push(x)
+})
+console.log(result)
+
+const result1 = []
+contacts.forEach(x => {
+  if (
+    !result1[result1.length - 1] ||
+    (result1[result1.length - 1] && result1[result1.length - 1][0][0] !== x[0])
+  ) {
+    result1[result1.length] = []
+  }
+
+  result1[result1.length - 1].push(x)
+})
+
+console.log(result1)
+
+// [["a1", "a2"], ["b1", "b2"]]
+
+// [
+//   a: ["a1", "a2"],
+//   b: ["b1", "b2"]
+// ]
