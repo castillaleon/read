@@ -2,9 +2,9 @@
 function fibonacci(n) {
   let cache = []
   for (let i = 0; i <= n; i++) {
-    if (i === 0) cache[i] = 0
-    if (i > 0 && i <= 2) cache[i] = 1
-    if (i > 2) {
+    if (i < 2) {
+      cache[i] = i
+    } else {
       cache[i] = cache[i - 1] + cache[i - 2]
     }
   }
@@ -18,9 +18,9 @@ console.log(fibonacci(10))
 function fib(n) {
   if (!fib.cache) fib.cache = []
   if (fib.cache[n]) return fib.cache[n]
-  if (n === 0) fib.cache[n] = 0
-  if (n > 0 && n <= 2) fib.cache[n] = 1
-  if (n > 2) {
+  if (n < 2) {
+    fib.cache[n] = n
+  } else {
     fib.cache[n] = fib(n - 2) + fib(n - 1)
   }
 
@@ -31,9 +31,9 @@ const fib1 = (() => {
   let cache = []
   return function(n) {
     if (cache[n]) return cache[n]
-    if (n === 0) cache[n] = 0
-    if (n > 0 && n <= 2) cache[n] = 1
-    if (n > 2) {
+    if (n < 2) {
+      cache[n] = n
+    } else {
       cache[n] = fib(n - 2) + fib(n - 1)
     }
 
